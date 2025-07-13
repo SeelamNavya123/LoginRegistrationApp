@@ -32,6 +32,16 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "LoginRegistrationApp.Controllers.RegistrationController",
+    "Method": "GetAllUsers",
+    "RelativePath": "api/Registration/users",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "LoginRegistrationApp.Controllers.UserController",
     "Method": "GetUsers",
     "RelativePath": "api/User/get-all-users",

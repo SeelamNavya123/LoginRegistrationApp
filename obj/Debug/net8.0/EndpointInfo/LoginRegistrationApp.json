@@ -67,6 +67,18 @@
         }
       }
     },
+    "/api/Registration/users": {
+      "get": {
+        "tags": [
+          "Registration"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/User/get-all-users": {
       "get": {
         "tags": [

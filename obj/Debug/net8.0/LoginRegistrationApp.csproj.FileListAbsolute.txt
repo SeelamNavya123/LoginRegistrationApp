@@ -79,3 +79,4 @@ E:\LoginPage\LoginRegistrationApp\LoginRegistrationApp\obj\Debug\net8.0\LoginReg
 E:\LoginPage\LoginRegistrationApp\LoginRegistrationApp\obj\Debug\net8.0\LoginRegistrationApp.genruntimeconfig.cache
 E:\LoginPage\LoginRegistrationApp\LoginRegistrationApp\obj\Debug\net8.0\ref\LoginRegistrationApp.dll
 E:\LoginPage\LoginRegistrationApp\LoginRegistrationApp\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+E:\LoginPage\LoginRegistrationApp\LoginRegistrationApp\obj\Debug\net8.0\LoginRegistrationApp.sourcelink.json
