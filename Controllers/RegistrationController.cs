@@ -112,7 +112,44 @@ namespace LoginRegistrationApp.Controllers
                 response.statusMessage = $"Error: {ex.Message}";
                 return StatusCode(500, response);
             }
+
         }
+
+        [HttpGet]
+        [Route("users")]
+        public IActionResult GetAllUsers()
+        {
+            List<Registration> users = new List<Registration>();
+
+            try
+            {
+                using SqlConnection con = new SqlConnection(_configuration.GetConnectionString("ToysCon"));
+                string query = "SELECT * FROM Registration";
+                SqlCommand cmd = new SqlCommand(query, con);
+
+                con.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    users.Add(new Registration
+                    {
+                        Id = Convert.ToInt32(reader["Id"]),
+                        UserName = reader["UserName"].ToString(),
+                        Email = reader["Email"].ToString(),
+                        IsActive = Convert.ToInt32(reader["IsActive"]),
+                        Password = "" // hide password in public API
+                    });
+                }
+                con.Close();
+
+                return Ok(users);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new { message = $"Error: {ex.Message}" });
+            }
+        }
+
 
         private static string HashPassword(string password)
         {
